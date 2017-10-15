@@ -18,7 +18,7 @@ time = timestart - time.time()
 time = abs(time)
 print("%.3f" % time)
 GPIO.output(7, GPIO.LOW)
-#num = input('Enter number: ')
+#num = input('Enter a number: ')
 #print ('Your number in binary is ' + num)
 
 GPIO.cleanup()
