@@ -4,7 +4,7 @@ import time #Required for program to use time functions like sleep
 GPIO.setmode(GPIO.BOARD) #Sets which pin numbering to use: board vs bcm
 pins = (7,11,13,15) #Creates list of GPIO pin numbers we want to interact with
 GPIO.setup(pins, GPIO.OUT) #Sets all GPIO pins in "pins" list as outputs
-
+  
 num = input('Enter number: ') #Ask user for number
 num = bin(num) #Convert number to binary
 num = num[2:] #Strip 0b identifier that Python adds during binary conversion
@@ -21,6 +21,7 @@ if num[3] == '1': #If the fourth digit is a 1 then
   GPIO.output(15, GPIO.HIGH) #make pin 15 high, turning on LED4
 
 time.sleep(3) #Wait for three seconds
+
 GPIO.cleanup() #Returns all GPIO pins back to their default state (input) so they can be used by another program after this program terminates
 
 

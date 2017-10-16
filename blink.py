@@ -3,7 +3,7 @@ import time
 # build all functions
 def blink(pin):
         GPIO.output(pin,GPIO.HIGH)
-        time.sleep(0.02)
+        time.sleep(0.04)
         GPIO.output(pin,GPIO.LOW)
         return
 # to use Raspberry Pi board pin numbers
