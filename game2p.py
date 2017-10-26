@@ -6,10 +6,9 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7, GPIO.OUT)
 GPIO.setup(38, GPIO.IN)
 GPIO.setup(40, GPIO.IN)
-
+winner = 0
 wait  = random.randint(1,5)
 time.sleep(wait)
-print(wait)
 
 GPIO.output(7,GPIO.HIGH)
 timestart = time.time()
@@ -21,11 +20,9 @@ while GPIO.input(38) == False and GPIO.input(40) == False:
 
 time = timestart - time.time()
 time = abs(time)
-print winner
-print("%.3f" % time)
+print(str(winner + " wins!"))
+print("Your reaction time was " + "%.3f" % time + " seconds")
 GPIO.output(7, GPIO.LOW)
-#num = input('Enter a number: ')
-#print ('Your number in binary is ' + num)
 
 GPIO.cleanup()
 
